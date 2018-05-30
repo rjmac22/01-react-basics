@@ -1,38 +1,14 @@
-import React, { Component } from 'react';
-import '../css/styles.css'
+import React from 'react';
+import classes from '../css/styles.css'
 
-class Header extends Component {
-
-
-
-  state = {
-    active:'active',
-    keywords: ''
-
-  }
-
-  imputChangeHandler = (event) => {
-    
-    this.setState({
-      keywords: event.target.value
-    })
-
-  }
-
-  render() {
-
-
-
+const Header = (props) => {
     return (
       <header>
-        <div className="logo">Logo</div>
-        <input type="text" onChange={this.imputChangeHandler} />
+        <div className={classes.logo}>Logo</div>
+        <input type="text" onChange={props.keywords} />
       </header>
     )
-  }
 }
-
-
 
 export default Header;
   
